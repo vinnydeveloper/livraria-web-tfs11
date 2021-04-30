@@ -16,3 +16,11 @@ export async function getBooks(name) {
 
   return books;
 }
+
+export async function getBookById(id) {
+  const response = await bookApi.get(`/volumes/${id}`);
+
+  const book = response.data;
+
+  return book;
+}
